@@ -2,6 +2,12 @@
 
 Alat za automatsku obradu Excel evidencija radnog vremena (.xls i .xlsx).
 
+## DEMO
+![Excel GO Parser Demo](Excel_GO_Parser.gif)
+
+## Workflow
+![Workflow](workflow.png)
+
 ## Funkcionalnosti
 
 - Podrška za `.xls` i `.xlsx` datoteke
