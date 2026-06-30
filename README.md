@@ -1,6 +1,15 @@
 # Excel GO Parser
 
+EN -> 
+FastAPI-based Excel attendance parser that automatically extracts employee vacation (GO/PTO) information from multiple .xls/.xlsx layouts and returns structured results through a Telegram bot.
+
+HR ->
 Alat za automatsku obradu Excel evidencija radnog vremena (.xls i .xlsx).
+
+## Example Excel Files
+- [Office attendance (.xls)](examples/EVIDENCIJA RADNOG VREMENA - 01 mj - URED.xls)
+- [Construction attendance (.xls)](examples/EVIDENCIJA RADNOG VREMENA - 01 mj - GRADILISTE.xls)
+- [Alternative layout (.xls)](examples/EVIDENCIJA RADNOG VREMENA - 01 mj - GRADILISTE 1.xls)
 
 ## DEMO
 ![Excel GO Parser Demo](Excel_GO_Parser.gif)
