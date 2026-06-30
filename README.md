@@ -9,7 +9,6 @@ Alat za automatsku obradu Excel evidencija radnog vremena (.xls i .xlsx).
 ## Example Excel Files
 - [Office attendance (.xls)](examples/EVIDENCIJA RADNOG VREMENA - 01 mj - URED.xls)
 - [Construction attendance (.xls)](examples/EVIDENCIJA RADNOG VREMENA - 01 mj - GRADILISTE.xls)
-- [Alternative layout (.xls)](examples/EVIDENCIJA RADNOG VREMENA - 01 mj - GRADILISTE 1.xls)
 
 ## DEMO
 ![Excel GO Parser Demo](Excel_GO_Parser.gif)
@@ -61,3 +60,4 @@ workflow.png
 ## Napomena
 
 Projekt služi za automatizaciju obrade evidencija radnog vremena i izračun godišnjih odmora bez ručnog pregledavanja Excel dokumenata.
+Sva navedena imena u dokumentu su izmišljena te služe samo kao pokazni primjer.
