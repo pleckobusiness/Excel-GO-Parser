@@ -1,9 +1,9 @@
 
 
 services:
-  sdk-mama-api:
+  excel-go-parser:
     build: .
-    container_name: sdk-mama-api-v2
+    container_name: excel-go-parser
     ports:
       - "8002:8001"
     restart: unless-stopped
@@ -14,9 +14,9 @@ services:
     ports:
       - "5678:5678"
     environment:
-      - WEBHOOK_URL=https://bulk-preteen-margarine.ngrok-free.dev
+      - WEBHOOK_URL=https://your-domain.example.com
       - N8N_PROTOCOL=https
-      - N8N_HOST=bulk-preteen-margarine.ngrok-free.dev
+      - N8N_HOST=your-domain.example.com
       - N8N_PORT=5678
       - N8N_SECURE_COOKIE=false
       - TZ=Europe/Zagreb
