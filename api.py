@@ -13,7 +13,7 @@ from fastapi import FastAPI, File, Form, UploadFile
 from fastapi.responses import JSONResponse
 
 
-app = FastAPI(title="SDK Mama GO Parser API")
+app = FastAPI(title = "Excel GO Parser")
 
 
 VACATION_CODES = {"GO", "G.O", "G.O.", "G O"}
@@ -47,7 +47,7 @@ WEEKDAY_KEYS = {
 }
 
 
-@dataclass(frozen=True)
+@dataclass(frozen = True)
 class SheetLayout:
     header_row: int
     day_columns: dict[int, int]
@@ -333,10 +333,10 @@ def detect_sheet_layout(df: pd.DataFrame) -> SheetLayout | None:
     work_type_col = detect_work_type_col(df, best_row, day_start_col)
 
     return SheetLayout(
-        header_row=best_row,
-        day_columns=best_days,
-        name_col=name_col,
-        work_type_col=work_type_col,
+        header_row = best_row,
+        day_columns = best_days,
+        name_col = name_col,
+        work_type_col = work_type_col,
     )
 
 
@@ -550,27 +550,27 @@ async def process_excel(file: UploadFile = File(...), filename: str | None = For
 
     tmp_path = ""
     try:
-        with tempfile.NamedTemporaryFile(delete=False, suffix=extension) as tmp:
+        with tempfile.NamedTemporaryFile(delete = False, suffix = extension) as tmp:
             tmp.write(await file.read())
             tmp_path = tmp.name
 
-        return parse_excel_file(tmp_path, parser_filename, file_type=file_type)
+        return parse_excel_file(tmp_path, parser_filename, file_type = file_type)
 
     except ImportError as exc:
         return JSONResponse(
-            status_code=500,
-            content={
+            status_code = 500,
+            content = {
                 "status": "error",
                 "message": "Nedostaje Python paket za čitanje Excel dokumenta.",
                 "details": str(exc),
             },
         )
     except ValueError as exc:
-        return JSONResponse(status_code=400, content={"status": "error", "message": str(exc)})
+        return JSONResponse(status_code = 400, content = {"status": "error", "message": str(exc)})
     except Exception as exc:
         return JSONResponse(
-            status_code=500,
-            content={"status": "error", "message": "Greška pri obradi Excel dokumenta.", "details": str(exc)},
+            status_code = 500,
+            content = {"status": "error", "message": "Greška pri obradi Excel dokumenta.", "details": str(exc)},
         )
     finally:
         if tmp_path and os.path.exists(tmp_path):
