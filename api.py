@@ -525,7 +525,7 @@ def parse_excel_file(path: str, original_filename: str, file_type: str | None = 
 
 @app.get("/")
 def home() -> dict[str, str]:
-    return {"status": "ok", "message": "SDK Mama GO Parser API radi."}
+    return {"status": "ok", "message": "Excel GO Parser API radi."}
 
 
 @app.post("/process-excel")
